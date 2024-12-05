@@ -35,7 +35,7 @@ const PlayerController = {
       async getTenHighestPaid(req, res) {
         try {
           const players = await Player.find()
-          .sort({salary:-1}) 
+          .sort({wage_eur:-1}) 
           .limit(10)
           res.send(players);
         } catch (error) {
